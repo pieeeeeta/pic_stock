@@ -14,8 +14,12 @@
 		<div class="caption text-center">
 			<h1>Pic Stock</h1>
 			<h3>写真投稿サービス</h3>
-      <%= link_to "Sign Up", new_user_registration_path, class: "btn btn-outline-light btn-lg mr-5" %>
-      <%= link_to "Log In", new_user_session_path, class: "btn btn-outline-light btn-lg" %>
+
+			<% unless user_signed_in? %>
+				<%= link_to "Sign Up", new_user_registration_path, class: "btn btn-outline-light btn-lg mr-5" %>
+				<%= link_to "Log In", new_user_session_path, class: "btn btn-outline-light btn-lg" %>
+			<% end %>
+
       <p class="notice"><%= notice %></p>
       <p class="alert"><%= alert %></p>
 		</div>
