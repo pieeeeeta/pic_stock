@@ -1,38 +1,4 @@
 
-<!-- Start Home Section -->
-<div id="home">
-
-	<!-- Navigation -->
-		<nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
-				<a href="#" class="navbar-brand">Pic Stock</a>
-				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
-						<span class="navbar-toggler-icon"></span>
-				</button>
-
-				<div class="collapse navbar-collapse" id="navbarResponsive">
-					<ul class="navbar-nav ml-auto">
-						<li class="nav-item">
-							<a href="#home" class="nav-link">Home</a>
-						</li>
-						<li class="nav-item">
-							<a href="#course" class="nav-link">Course</a>
-						</li>
-						<li class="nav-item">
-							<a href="#features" class="nav-link">Features</a>
-						</li>
-						<li class="nav-item">
-							<a href="#resources" class="nav-link">Resources</a>
-						</li>
-						<li class="nav-item">
-							<a href="#clients" class="nav-link">Clients</a>
-						</li>
-						<li class="nav-item">
-							<a href="#contact" class="nav-link">Contact</a>
-						</li>
-					</ul>
-				</div>
-		</nav> 
-	<!-- End Navigation -->
 
 
 	<!-- Start Landing Page Section -->
@@ -50,6 +16,8 @@
 			<h3>写真投稿サービス</h3>
       <%= link_to "Sign Up", new_user_registration_path, class: "btn btn-outline-light btn-lg mr-5" %>
       <%= link_to "Log In", new_user_session_path, class: "btn btn-outline-light btn-lg" %>
+      <p class="notice"><%= notice %></p>
+      <p class="alert"><%= alert %></p>
 		</div>
 	<!-- End Start Landing Page Section -->
 
