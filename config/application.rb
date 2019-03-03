@@ -7,7 +7,7 @@ require 'rails/all'
 Bundler.require(*Rails.groups)
 
     #herokuからのメール送信のための設定?
-    config.assets.initialize_on_precompile = true
+    config.assets.initialize_on_precompile = false
 
 
 module PicStock
