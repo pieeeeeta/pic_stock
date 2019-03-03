@@ -6,6 +6,10 @@ require 'rails/all'
 # you've limited to :test, :development, or :production.
 Bundler.require(*Rails.groups)
 
+#herokuからのメール送信のための設定?
+config.assets.initialize_on_precompile = false
+
+
 module PicStock
   class Application < Rails::Application
     # Initialize configuration defaults for originally generated Rails version.
