@@ -73,7 +73,4 @@ Rails.application.configure do
   # routes, locales, etc. This feature depends on the listen gem.
   config.file_watcher = ActiveSupport::EventedFileUpdateChecker
 
-
-  #herokuからのメール送信のための設定?
-  config.assets.initialize_on_precompile = false
 end
