@@ -5,6 +5,11 @@
   <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
     <%= render "devise/shared/error_messages", resource: resource %>
 
+    <div class="field mt-4">
+      <%= f.label :nickname, "ユーザー名" %><em>(最大10文字)</em><br />
+      <%= f.text_field :nickname, autofocus: true, maxlength: "10" %>
+    </div>
+    
 
     <div class="field my-2">
       <%= f.label :email, "Eメール"%><br />
