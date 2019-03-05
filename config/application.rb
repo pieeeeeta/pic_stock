@@ -14,8 +14,14 @@ module PicStock
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 5.2
 
-        #herokuからのメール送信のための設定?
-        config.assets.initialize_on_precompile = false
+    #herokuからのメール送信のための設定?
+    config.assets.initialize_on_precompile = false
+
+    # デフォルトのlocaleを日本語(:ja)にする
+    config.i18n.default_locale = :ja
+    config.i18n.load_path += Dir[Rails.root.join('config', 'locales', '**', '*.{rb,yml}').to_s]
+
+
 
 
     # Settings in config/environments/* take precedence over those specified here.
