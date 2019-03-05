@@ -21,6 +21,11 @@
 	<!-- Navigation -->
 		<nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
 				<a href="/" class="navbar-brand">Pic Stock</a>
+
+				<% if user_signed_in? %>
+					<a href="/" class="text-muted"><%=current_user.nickname  %></a>
+				<% end %>
+
 				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
 						<span class="navbar-toggler-icon"></span>
 				</button>
@@ -32,7 +37,7 @@
 						</li>
             
 						<li class="nav-item">
-							<a href="/#course" class="nav-link">Course</a>
+							<a href="/#about" class="nav-link">About</a>
 						</li>
 
 						<li class="nav-item">
@@ -49,9 +54,7 @@
               </li>
             <% end %>
 
-						<li class="nav-item">
-							<a href="/#contact" class="nav-link">Contact</a>
-						</li>
+					
 					</ul>
 				</div>
 		</nav> 
