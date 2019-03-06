@@ -50,6 +50,12 @@
 							<a href="/#popular" class="nav-link">Popular</a>
 						</li>
 
+            <% unless user_signed_in?%>
+              <li class="nav-item">
+                <%= link_to "LOG IN", new_user_session_path, class: "nav-link"%>
+              </li>
+            <% end %>
+
             <% if user_signed_in?%>
               <li class="nav-item">
                 <%= link_to "LOG OUT", destroy_user_session_path, method: :delete, class: "nav-link"%>
