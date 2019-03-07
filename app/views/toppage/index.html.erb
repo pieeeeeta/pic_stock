@@ -19,6 +19,8 @@
 			<% unless user_signed_in? %>
 				<%= link_to "Sign Up", new_user_registration_path, class: "btn btn-outline-light btn-lg mr-5" %>
 				<%= link_to "Log In", new_user_session_path, class: "btn btn-outline-light btn-lg" %>
+			<% else %>
+				<%= link_to "写真を投稿", new_picpost_path, class: "btn btn-outline-light btn-lg" %>
 			<% end %>
 
 			<p class="notice mt-3"><%= notice %></p>
@@ -41,9 +43,9 @@
 
 	<div class="col-12 narrow text-center">
 		<h3 class="heading">PIC STOCK</h3>
-		<p>誰でも写真を自由に投稿し、お気に入りの写真を探すことができるサービスです。</p>
-		<p>インスタグラムと何が違うの？という質問はしないでください。</p>
-		<a class="btn btn-secondary btn-md" href="#">写真を投稿</a>
+		<p>誰でも写真を自由に投稿し、<br />お気に入りの写真を探すことができるサービスです。</p>
+		<p>インスタグラムと何が違うの？<br />という質問はしないでください。</p>
+		<%= link_to "写真を投稿", new_picpost_path, class: "btn btn-secondary btn-md"%>
 	</div>
 
 </div>

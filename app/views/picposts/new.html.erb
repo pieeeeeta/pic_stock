@@ -1,0 +1,23 @@
+<div class="form_wrapper">
+
+  <h1>New Post</h1>
+
+  <%= form_for(@picpost) do |f|%>
+
+    <div class="field mt-4">
+      <%= f.label :place, "場所" %><br />
+      <%= f.text_field :place, autofocus: true %>
+    </div>
+
+    <div class="field mt-4">
+      <%= f.label :title, "タイトル" %><br />
+      <%= f.text_field :title, autofocus: true %>
+    </div>
+
+    <div class="actions">
+      <%= f.submit "写真を投稿", class:"btn btn-outline-secondary my-5" %>
+    </div>
+
+  <% end %>
+
+</div>
