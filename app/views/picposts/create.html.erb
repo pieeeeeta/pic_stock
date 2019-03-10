@@ -1,2 +1,13 @@
-<h1>Picposts#create</h1>
-<p>Find me in app/views/picposts/create.html.erb</p>
+<div class="form_wrapper">
+
+  <h1>投稿が完了しました！</h1>
+
+  <%= @picpost.title %>
+  <%= @picpost.place%>
+
+  <div>
+  <%= image_tag @picpost.picture.url if @picpost.picture? %>
+  </div>
+  
+</div>
+

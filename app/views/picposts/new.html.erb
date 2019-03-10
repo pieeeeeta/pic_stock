@@ -14,10 +14,17 @@
       <%= f.text_field :title, autofocus: true %>
     </div>
 
+    <div class="field mt-4">
+      <%= f.label :picture, "写真" %><br />
+      <%= f.file_field :picture %>
+    </div>
+
+    
+
     <div class="actions">
       <%= f.submit "写真を投稿", class:"btn btn-outline-secondary my-5" %>
     </div>
 
   <% end %>
 
-</div>
+</>
