@@ -73,21 +73,15 @@
 
 				<div class="row grid">
 
-					<div class="col-4 img-box">
-						<%= image_tag("1.jpg") %>
-						<p class="picture-text">sample</p>
-					</div>
+					<% @picposts.each do |picpost| %>
 
-					<div class="col-4"><%= image_tag("2.jpg") %></div>
-					<div class="col-4"><%= image_tag("3.jpg") %></div>
+						<div class="col-4 img-box">
+							<%= image_tag picpost.picture.url %>
 
-					<div class="col-4"><%= image_tag("4.jpg") %></div>
-					<div class="col-4"><%= image_tag("5.jpg") %></div>
-					<div class="col-4"><%= image_tag("6.jpg") %></div>
+							<p class="picture-text"><%= picpost.place %></p>
+						</div>		
 
-					<div class="col-4"><%= image_tag("7.jpg") %></div>
-					<div class="col-4"><%= image_tag("8.jpg") %></div>
-					<div class="col-4"><%= image_tag("9.jpg") %></div>
+					<% end %>
 
 				</div>
 				

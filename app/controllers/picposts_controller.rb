@@ -15,4 +15,5 @@ class PicpostsController < ApplicationController
   def picpost_params
     params.require(:picpost).permit(:title, :place, :picture)
   end
+  
 end
