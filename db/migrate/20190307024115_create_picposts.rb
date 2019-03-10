@@ -10,6 +10,6 @@ class CreatePicposts < ActiveRecord::Migration[5.2]
       t.timestamps
     end
   
-      add_index :picposts, [:user_id, :created_id]
+      add_index :picposts, [:user_id, :created_at]
   end
 end
