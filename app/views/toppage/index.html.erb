@@ -68,6 +68,8 @@
 				<div class="heading-underline"></div>
 			</div>
 
+			<p><%= flash[:success] %></p>
+
 			
 			<div class="container-fluid">
 
@@ -76,9 +78,13 @@
 					<% @picposts.each do |picpost| %>
 
 						<div class="col-4 img-box">
-							<%= image_tag picpost.picture.url %>
+
+							<%= link_to picpost_path(picpost) do %>
+								<%= image_tag picpost.picture.url %>
+							<% end %>
 
 							<p class="picture-text"><%= picpost.place %></p>
+
 						</div>		
 
 					<% end %>
