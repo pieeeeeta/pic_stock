@@ -11,6 +11,14 @@ body {
   word-wrap: break-word;
 }
 
+a {
+  color: #505962;
+}
+
+ul{
+  list-style: none;
+}
+
 .offset:before {
   display: block;
   content:"";
@@ -26,6 +34,10 @@ body {
   font-size: .9rem;
   letter-spacing: 0.1rem;
   background: rgba(0,0,0, 0.6) !important;
+}
+
+.navbar-brand{
+  color: #1ebba3;
 }
 
 .navbar-brand img{
@@ -87,7 +99,7 @@ body {
 
 /*============= COURSE SECTION =============*/
  .narrow {
-   width: 75%;
+   width: 90%;
    margin: 1.5rem auto;
    padding-top: 2rem;
  }
