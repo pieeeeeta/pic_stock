@@ -69,6 +69,7 @@
 			</div>
 
 			<p><%= flash[:success] %></p>
+			<p><%= flash[:danger] %></p>
 
 			
 			<div class="container-fluid">
@@ -83,7 +84,7 @@
 								<%= image_tag picpost.picture.url %>
 							<% end %>
 
-							<p class="picture-text"><%= picpost.place %></p>
+							<p class="picture-text"><%= picpost.user.nickname %></p>
 
 						</div>		
 

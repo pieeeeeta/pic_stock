@@ -16,6 +16,15 @@ class PicpostsController < ApplicationController
     redirect_to "/#new"
   end
 
+  def destroy
+    picpost = Picpost.find(params[:id])
+    if picpost && (current_user.id == picpost.user_id)
+      picpost.destroy      
+    end
+    flash[:danger] ="削除しました！"
+    redirect_to "/#new"
+  end
+
   private
   
   def picpost_params

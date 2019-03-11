@@ -6,4 +6,9 @@
 
   <%= @picpost.text%>
 
+
+  <% if current_user && (@picpost.user_id == current_user.id) %>
+    <%= link_to "削除する", picpost_path(@picpost), method: :delete, class: "btn btn-outline-secondary mt-5"%>
+  <% end %>
+
 </div>
