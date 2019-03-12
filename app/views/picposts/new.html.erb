@@ -11,7 +11,7 @@
 
     <div class="field mt-4">
       <%= f.label :picture, "写真" %><br />
-      <%= f.file_field :picture %>
+      <%= f.file_field :picture, id: :picpost_img %>
     </div>
 
 
@@ -20,12 +20,11 @@
       <%= f.text_area :text, autofocus: true %>
     </div>
 
-    
-
     <div class="actions">
-      <%= f.submit "写真を投稿", class:"btn btn-outline-secondary my-5" %>
+      <%= f.submit "写真を投稿", class:"btn btn-secondary my-5" %>
     </div>
 
   <% end %>
 
-</>
+</div>
+

@@ -25,7 +25,7 @@
 				<a href="/" class="navbar-brand">Pic Stock</a>
 
 				<% if user_signed_in? %>
-					<a href="/" class="text-muted"><%=current_user.nickname  %></a>
+					<%= link_to "#{current_user.nickname}", user_path(current_user), class: "text-muted" %>
 				<% end %>
 
 				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">

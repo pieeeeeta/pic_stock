@@ -1,0 +1,34 @@
+<div class= "text-center mt-5">
+  <div class="jumbotron">
+
+    <div class="col-12">
+      <h3 class="heading"><%= @user.nickname %>'s ALBUM</h3>
+      <div class="heading-underline"></div>
+    </div>
+
+
+
+    <div class="container-fluid">
+
+      <div class="row grid">
+
+        <% @user.picposts.each do |picpost| %>
+
+          <div class="col-4 img-box">
+
+            <%= link_to picpost_path(picpost) do %>
+              <%= image_tag picpost.picture.url %>
+            <% end %>
+
+            <p class="picture-text"><%= picpost.place %></p>
+
+          </div>		
+
+        <% end %>
+
+      </div>
+      
+    </div>
+    
+  </div>
+</div>
