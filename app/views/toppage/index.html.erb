@@ -55,7 +55,6 @@
 
 
 
-<%= render partial: 'picposts/picposts', collection: @picposts, as: :picpost %>
 
 
 
@@ -84,22 +83,10 @@
 			<div class="container-fluid">
 
 				<div class="row grid">
+									
 
-				
+					<%= render partial: 'picposts/picposts', collection: @picposts, as: :picpost %>
 
-					<% @picposts.each do |picpost| %>
-
-						<div class="col-4 img-box">
-
-							<%= link_to picpost_path(picpost) do %>
-								<%= image_tag picpost.picture.url %>
-							<% end %>
-
-							<p class="picture-text"><%= picpost.user.nickname %></p>
-
-						</div>		
-
-					<% end %>
 
 				</div>
 				

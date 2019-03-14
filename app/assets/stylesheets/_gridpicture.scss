@@ -31,3 +31,20 @@
   cursor: pointer;
   opacity: 0.5;
 }
+
+
+
+// いいねぼたん
+
+.like-link{
+  width:100%;
+  position: absolute;
+  top:70%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  opacity: 0.8;
+}
+
+.like-link a{
+  color:white;
+}
