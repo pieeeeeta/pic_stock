@@ -55,6 +55,15 @@
 
 
 
+<%= render partial: 'picposts/picposts', collection: @picposts, as: :picpost %>
+
+
+
+
+
+
+
+
 <!-- Start Features Section -->
 <div id="new" class="offset">
 
@@ -75,6 +84,8 @@
 			<div class="container-fluid">
 
 				<div class="row grid">
+
+				
 
 					<% @picposts.each do |picpost| %>
 

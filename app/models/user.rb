@@ -5,5 +5,8 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable, :confirmable
 
+  has_many :likes, dependent: :destroy
+  has_many :like_picposts, through: :likes, source: :picpost
+
   
 end

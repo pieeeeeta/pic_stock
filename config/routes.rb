@@ -7,5 +7,8 @@ Rails.application.routes.draw do
   resources :picposts
   resources :users, only: [:index, :show]
 
+  post '/like/:picpost_id', to: 'likes#like', as: 'like'
+  delete '/like/:picpost_id', to: 'likes#unlike', as: 'unlike'
+
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
