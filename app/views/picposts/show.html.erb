@@ -1,14 +1,22 @@
 <div class="text-center mt-5 show-page">
 
-  <%= @picpost.place%>
+  <!-- Portfolio Item Heading -->
+  <h1 class="my-4 pt-4"><%= @picpost.user.nickname %>'s pic</h1>
 
-  <%= image_tag @picpost.picture.url %>
+  <!-- Portfolio Item Row -->
+  <div class="row">
 
-  <%= @picpost.text%>
+    <div class="col-md-8">
+      <%= image_tag @picpost.picture.url, class: "img-fluid" %>
+    </div>
 
-  <%= render partial: 'picposts/picposts', locals: {picpost: @picpost} %>
+    <div class="col-md-4">
+      <h3 class="my-3">Photo Description</h3>
+      <p><%= @picpost.text %></p>    
+    </div>
 
-
+  </div>
+  <!-- /.row -->
 
   <% if current_user && (@picpost.user_id == current_user.id) %>
     <%= link_to "削除する", picpost_path(@picpost), method: :delete, class: "btn btn-outline-secondary mt-5"%>
