@@ -120,21 +120,8 @@
 
 				<div class="row grid">
 
-					<div class="col-4 img-box">
-						<%= image_tag("10.jpg") %>
-						<p class="picture-text">sample</p>
-					</div>
+					<%= render partial: 'picposts/picposts', collection: @picposts_ranking, as: :picpost %>
 
-					<div class="col-4"><%= image_tag("11.jpg") %></div>
-					<div class="col-4"><%= image_tag("12.jpg") %></div>
-
-					<div class="col-4"><%= image_tag("13.jpg") %></div>
-					<div class="col-4"><%= image_tag("14.jpg") %></div>
-					<div class="col-4"><%= image_tag("15.jpg") %></div>
-
-					<div class="col-4"><%= image_tag("16.jpg") %></div>
-					<div class="col-4"><%= image_tag("17.jpg") %></div>
-					<div class="col-4"><%= image_tag("18.jpg") %></div>
 
 				</div>
 				
